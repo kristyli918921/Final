@@ -1,0 +1,22 @@
+
+import globalvariables
+
+import time
+import board
+import neopixel
+
+pixpin = board.A3
+numpix = 128
+
+
+strip = neopixel.NeoPixel(pixpin, numpix, brightness=0.1, auto_write=False)
+
+
+def lookupColor(color,i):
+    if color == 10:
+        strip[i] = (0,0,102)
+    # blue
+    elif color == 11:
+        strip[i] = (0,0,0)
+    # black/no colour
+   
