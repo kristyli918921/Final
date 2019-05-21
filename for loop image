@@ -1,0 +1,46 @@
+import time
+import board
+import neopixel
+
+pixpin = board.A3
+numpix = 128
+
+strip = neopixel.NeoPixel(pixpin, numpix, brightness=0.1, auto_write=False)
+
+while True:
+
+    for x in range(0,128):
+        strip[x] = (0,255,0)
+    strip.write()
+    time.sleep(1)
+
+    strip[30] = (255,255,255)
+    strip[38] = (102,51,0)
+    strip[39] = (102,51,0)
+    strip[46] = (102,51,0)
+    strip[47] = (102,51,0)
+    strip[89] = (255,255,255)
+    strip[97] = (102,51,0)
+    strip[96] = (102,51,0)
+    strip[105] = (102,51,0)
+    strip[104] = (102,51,0)
+    strip[112] = (255,255,255)
+    strip[55] = (255,255,255)
+    strip[21] = (255,255,255)
+    strip[22] = (255,255,255)
+    strip[23] = (255,255,255)
+    strip[80] = (255,255,255)
+    strip[81] = (255,255,255)
+    strip[82] = (255,255,255)
+    strip[54] = (255,255,255)
+    strip[113] = (255,255,255)
+    strip[85] = (255,0,0)
+    strip[93] = (255,0,0)
+    strip[101] = (255,0,0)
+    strip[117] = (255,0,0)
+    strip[31] = (255,255,255)
+    strip[88] = (255,255,255)
+
+
+    strip.write()
+    time.sleep(5)
